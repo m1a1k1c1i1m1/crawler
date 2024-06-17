@@ -1,0 +1,9 @@
+Util/config.yaml
+.idea
+data/
+crawler/__pycache__/
+todo_av/__pycache__/
+Util/__pycache__/
+bind/__pycache__/
+parser/__pycache__/
+__pycache__/
