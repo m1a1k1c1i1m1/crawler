@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>{% block title %}{% endblock title %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href={% block cssfile %}{% endblock cssfile %}>
+        <link rel="stylesheet" href={% static 'main\css\index.css' %}>
+    </head>
+    <body>
+        <div class="contener">
+            <div class="conteiner">
+                <nav class="menu">
+                        <div class="menu__logo">
+                            <li class="logo__item icon"><img class="logo" src={% static 'main\img\1168014.png' %}></li>
+                            <li class="logo__item title"><span class="logo__title">CarPablic</span></li>
+                        </div>
+                        <div class="menu__list">
+                            <li class="menu__item"><a  class="menu__link" href='http://127.0.0.1:8000/'>Home</a></li>
+                            <li class="menu__item"><a  class="menu__link" href='http://127.0.0.1:8000/about'>About</a></li>
+                            <li class="menu__item"><a  class="menu__link" href='http://127.0.0.1:8000/Contact'>Contact</a></li>
+                        </div>
+                </nav>
+                {% block content %}
+                {% endblock content %}
+            </div>
+        </div>
+        <script src="" async defer></script>
+    </body>
+</html>
